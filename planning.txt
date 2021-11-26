@@ -1,0 +1,28 @@
+planning flow of program
+  
+right now the program assumes that if you enter something in binary, you want it in decimal, 
+and if you enter something in hex, you want it in hex. i would like to allow threeway conversions 
+and have them be as convenient as possible but with 6 possible directions the computer cannot 
+make assumptions which conversions people actually want. this is me trying to figure out what
+flow would be needed for this to work.
+
+  bh
+  hb
+  bd
+  db
+  hd
+  dh
+
+always prompt a value, unless user has quit
+"q" to quit, "d" to switch to to dec mode, "bh" tp switch to bin/hex mode
+
+in bin/hex mode:
+  prompt "[bin <-> hex] enter value: "
+    if input is bin, convert to hex
+    if input is hex, convert to bin
+    if input is dec, ask "convert to bin or hex? (enter 'b' or 'h')"
+
+in dec mode:
+  prompt "[? --> dec] enter value: " and always convert to dec
+
+  
